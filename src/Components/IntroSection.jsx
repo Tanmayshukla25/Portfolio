@@ -4,7 +4,7 @@ import Profile from "../assets/Tanmay.jpg"
 
 const IntroSection = ({ activeSection }) => {
   return (
-    <div className="Hero w-full min-h-[400px] pt-10  mb-16 relative overflow-hidden">
+    <div className="Hero w-full min-h-[400px] pt-20  mb-16 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-gray-900/40 to-orange-900/20 rounded-2xl"
