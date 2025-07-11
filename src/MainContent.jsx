@@ -6,6 +6,7 @@ import {
 import {
   SiTailwindcss, SiMongodb, SiFirebase, SiGmail
 } from 'react-icons/si';
+import { SiBootstrap } from "react-icons/si";
 
 
 function MainContent({ activeSection }) {
@@ -53,6 +54,7 @@ function MainContent({ activeSection }) {
             <SkillIcon icon={<SiTailwindcss />} name="Tailwind" color="text-teal-400" />
             <SkillIcon icon={<SiFirebase />} name="Firebase" color="text-yellow-500" />
             <SkillIcon icon={<FaGitAlt />} name="Git" color="text-red-400" />
+            <SkillIcon icon={<SiBootstrap />} name="Bootstrap" color="text-purple-400" />
           </div>
         </div>
       </motion.div>
