@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Profile from "../assets/Tanmay.jpg"
 
+
 const IntroSection = ({ activeSection }) => {
   return (
     <div className="Hero w-full min-h-[400px] pt-20  mb-16 relative overflow-hidden">
@@ -105,7 +106,7 @@ const IntroSection = ({ activeSection }) => {
           </motion.p>
           
           <motion.a
-            href=""
+           href="tanmayResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className='inline-block relative group'
