@@ -76,21 +76,16 @@ const IntroSection = ({ activeSection }) => {
           </motion.h1>
           
           <motion.div
-            className="relative mb-6 sm:mb-8"
+            className="relative  sm:mb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h2 className='text-gray-300 text-sm sm:text-base md:text-lg font-medium tracking-[0.2em] mb-4 sm:mb-6'>
+            <h2 className='text-gray-300 text-sm sm:text-base md:text-lg font-medium tracking-[0.2em]  '>
               I AM A FULL STACK DEVELOPER
             </h2>
             
-            {/* Animated typing indicator */}
-            <motion.div
-              className="inline-block w-0.5 h-4 bg-orange-500 ml-1"
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
-            />
+        
           </motion.div>
           
           <motion.p 
