@@ -154,14 +154,14 @@ function MainContent({ activeSection }) {
                   className="flex items-center gap-3 hover:text-white transition-colors duration-300"
                   whileHover={{ x: 5 }}
                 >
-                  <span className="text-xl">♟️</span>
+                 
                   <span>Playing cricket</span>
                 </motion.li>
                 <motion.li
                   className="flex items-center gap-3 hover:text-white transition-colors duration-300"
                   whileHover={{ x: 5 }}
                 >
-                  <span className="text-xl">🎌</span>
+                 
                   <span>Watching movie</span>
                 </motion.li>
               </ul>
