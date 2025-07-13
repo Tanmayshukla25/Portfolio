@@ -401,6 +401,7 @@ function MainContent({ activeSection }) {
             >
               <motion.a
                 href="https://www.linkedin.com/in/tanmay-shukla-620724329/"
+                  target="_blank"
                 className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-full hover:bg-blue-600/20 transition border border-gray-600/30 group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -409,6 +410,7 @@ function MainContent({ activeSection }) {
               </motion.a>
               <motion.a
                 href="https://github.com/Tanmayshukla25"
+                  target="_blank"
                 className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-full hover:bg-gray-600/20 transition border border-gray-600/30 group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
