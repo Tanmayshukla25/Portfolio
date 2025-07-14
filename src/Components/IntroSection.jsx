@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Profile from "../assets/Tanmay.jpg"
+import Profile from "../assets/ProfilePick.jpg"
 
 
 const IntroSection = ({ activeSection }) => {
@@ -191,7 +191,7 @@ const IntroSection = ({ activeSection }) => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
             
-            <div className="relative z-10">
+            <div className="relative z-10 rotate-10">
               <img
                 src={Profile}
                 alt="Tanmay Shukla's Profile"
