@@ -139,10 +139,10 @@ const IntroSection = ({ activeSection }) => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="relative inline-block">
-              <p className="text-gray-300 text-xs sm:text-sm font-medium px-6 py-3 bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-600/50 shadow-lg">
+              <p className="text-gray-300 text-xs sm:text-sm font-medium px-10 py-3 bg-gray-800/60 backdrop-blur-sm rounded-full border border-gray-600/50 shadow-lg">
                 <span className="relative">
                   <motion.span
-                    className="absolute -left-6 top-1/2 -translate-y-1/2 w-3 h-3 bg-green-500 rounded-full"
+                    className="absolute -left-5 top-1/2 -translate-y-1/2 w-3 h-3 bg-green-500 rounded-full"
                     animate={{ 
                       scale: [1, 1.2, 1],
                       opacity: [0.8, 1, 0.8]
@@ -150,7 +150,7 @@ const IntroSection = ({ activeSection }) => {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   />
                   <motion.span
-                    className="absolute -left-6 top-1/2 -translate-y-1/2 w-3 h-3 bg-green-400 rounded-full"
+                    className="absolute -left-5 top-1/2 -translate-y-1/2 w-3 h-3 bg-green-400 rounded-full"
                     animate={{ 
                       scale: [1, 1.8, 1],
                       opacity: [0.4, 0, 0.4]
