@@ -131,7 +131,7 @@ function MainContent({ activeSection }) {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Hi, I'm Tanmayshukla — a passionate developer who thrives on
+              Hi, I'm Tanmay shukla — a passionate developer who thrives on
               creating visually striking and highly functional web experiences.
               With a deep love for both front-end aesthetics and back-end
               architecture, I enjoy crafting seamless digital solutions that not
@@ -162,7 +162,7 @@ function MainContent({ activeSection }) {
                   whileHover={{ x: 5 }}
                 >
                  
-                  <span>Watching movie</span>
+                  <span>Watching movies</span>
                 </motion.li>
               </ul>
             </motion.div>
@@ -172,7 +172,7 @@ function MainContent({ activeSection }) {
 
       {/* Portfolio Section */}
       <motion.div
-        id="porjects"
+        id="project"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

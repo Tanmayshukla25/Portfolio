@@ -103,7 +103,7 @@ const Header = ({ activeSection, setActiveSection, menuOpen, setMenuOpen }) => {
           />
           
           <ul className='relative flex flex-col sm:flex-row gap-6 sm:gap-8 text-sm sm:text-base text-center'>
-            {['about', 'porjects', 'contact'].map((section, index) => (
+            {['about', 'project', 'contact'].map((section, index) => (
               <motion.li 
                 key={section}
                 initial={{ opacity: 0, y: 20 }}
