@@ -10,6 +10,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+import { BiLogoMongodb } from "react-icons/bi";
 import { SiTailwindcss, SiMongodb, SiFirebase, SiGmail } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
 import poke from "./assets/Poke.png";
@@ -18,6 +19,7 @@ import DashBoard from "./assets/Dashboard.png";
 import tanishq from "./assets/Tanishq.png";
 import Ecommerce from "./assets/Ecommerce.png";
 import TMDB from "./assets/TMDB.png";
+
 
 function MainContent({ activeSection }) {
   return (
@@ -85,6 +87,18 @@ function MainContent({ activeSection }) {
               name="Bootstrap"
               color="text-purple-400"
             />
+              <SkillIcon
+              icon={<FaNodeJs />}
+              name="Node"
+              color="text-green-500"
+            />
+              <SkillIcon
+              icon={<BiLogoMongodb />}
+              name="MongoDB"
+               color="text-green-500"
+             
+            />
+             
           </div>
         </div>
       </motion.div>
