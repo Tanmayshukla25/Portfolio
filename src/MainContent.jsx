@@ -16,7 +16,7 @@ import { SiBootstrap } from "react-icons/si";
 import poke from "./assets/Poke.png";
 import Flip from "./assets/FlipGame.png";
 import DashBoard from "./assets/Dashboard.png";
-import tanishq from "./assets/Tanishq.png";
+import tanishq from "./assets/Jewellery.png";
 import Ecommerce from "./assets/Ecommerce.png";
 import TMDB from "./assets/TMDB.png";
 
@@ -227,11 +227,11 @@ function MainContent({ activeSection }) {
               technologies={["React", "Tailwind CSS"]}
             />
             <ProjectCard
-              title="Tanishq-Clone"
-              description="Built a luxurious Tanishq Jewelry Web App Clone using React + Tailwind CSS, blending elegance with responsive design. Features include interactive sliders, modern UI"
+              title="Jewellery-store"
+              description="An elegant full-stack jewellery store web app with product browsing, cart system, and authentication using React, Node.js, MongoDB, and Tailwind CSS."
               ProjectImage={tanishq}
-              projectLink="https://tanishq-roan.vercel.app"
-            technologies={["React", "Tailwindcss"]}
+              projectLink="https://ecommerceapi-frontend.onrender.com"
+            technologies={["React", "Tailwindcss","Node.js","MondoDB"]}
             />
             <ProjectCard
               title="Poke-World"
