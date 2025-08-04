@@ -9,6 +9,7 @@ import {
   FaGitAlt,
   FaLinkedin,
   FaGithub,
+  
 } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { SiTailwindcss, SiMongodb, SiFirebase, SiGmail } from "react-icons/si";
@@ -19,6 +20,8 @@ import DashBoard from "./assets/Dashboard.png";
 import tanishq from "./assets/Jewellery.png";
 import Ecommerce from "./assets/Ecommerce.png";
 import TMDB from "./assets/TMDB.png";
+import { SiExpress } from "react-icons/si";
+
 
 
 function MainContent({ activeSection }) {
@@ -96,6 +99,13 @@ function MainContent({ activeSection }) {
               icon={<BiLogoMongodb />}
               name="MongoDB"
                color="text-green-500"
+             
+            />
+
+             <SkillIcon
+              icon={<SiExpress />}
+              name="Express"
+               color="text-yellow-500"
              
             />
              

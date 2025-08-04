@@ -163,42 +163,44 @@ const IntroSection = ({ activeSection }) => {
             </div>
           </motion.div>
           
-          <motion.div 
-            className="relative group"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            {/* Animated ring around profile */}
-            <motion.div
-              className="absolute inset-0 rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            >
-              <div className="w-full h-full rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 p-1 opacity-70">
-                <div className="w-full h-full rounded-full bg-gray-900"></div>
-              </div>
-            </motion.div>
-            
-            {/* Pulsing glow effect */}
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 opacity-30 blur-xl"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-            
-            <div className="relative z-10 rotate-10">
-              <img
-                src={Profile}
-                alt="Tanmay Shukla's Profile"
-                className='relative z-10 border-4 border-gray-700 rounded-full h-[120px] w-[120px] sm:h-[160px] sm:w-[160px] md:h-[200px] md:w-[200px] lg:h-[240px] lg:w-[240px] object-cover mx-auto shadow-2xl transition-all duration-300 group-hover:border-orange-400'
-              />
-            </div>
-          </motion.div>
+         <motion.div 
+  className="relative flex items-center justify-center"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  whileHover={{ scale: 1.05 }}
+>
+  {/* Animated rotating ring */}
+  <motion.div
+    className="absolute w-[210px] h-[210px] rounded-full"
+    animate={{ rotate: 360 }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+  >
+    <div className="w-full h-full rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 p-1 opacity-70">
+      <div className="w-full h-full rounded-full bg-gray-900"></div>
+    </div>
+  </motion.div>
+
+  {/* Pulsing glow effect */}
+  <motion.div
+    className="absolute w-[260px] h-[260px] rounded-full bg-gradient-to-r from-orange-400 to-pink-500 opacity-30 blur-xl"
+    animate={{
+      scale: [1, 1.2, 1],
+      opacity: [0.3, 0.6, 0.3]
+    }}
+    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+  />
+
+  {/* Profile Image */}
+  <div className="relative z-10">
+    <img
+      src={Profile}
+      alt="Tanmay Shukla's Profile"
+      className="border-4 border-gray-700 rounded-full h-[200px] w-[200px] rotate-10 object-cover mx-auto shadow-2xl transition-all duration-300 group-hover:border-orange-400"
+    />
+  </div>
+</motion.div>
+
         </motion.div>
       </div>
     </div>
