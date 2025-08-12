@@ -21,6 +21,13 @@ import tanishq from "./assets/Jewellery.png";
 import Ecommerce from "./assets/Ecommerce.png";
 import TMDB from "./assets/TMDB.png";
 import { SiExpress } from "react-icons/si";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+
 
 
 
@@ -195,86 +202,91 @@ function MainContent({ activeSection }) {
       </motion.div>
 
       {/* Portfolio Section */}
-      <motion.div
-        id="project"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="Portfolio-section w-full max-w-[1400px] mt-10 text-white p-6 sm:p-8 md:p-10 overflow-hidden mx-auto relative"
-      >
-        {/* Animated background */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-gray-900/40 to-purple-900/20 rounded-2xl"
-          animate={{
-            background: [
-              "linear-gradient(135deg, rgba(29, 78, 216, 0.2), rgba(17, 24, 39, 0.4), rgba(88, 28, 135, 0.2))",
-              "linear-gradient(135deg, rgba(88, 28, 135, 0.2), rgba(29, 78, 216, 0.4), rgba(17, 24, 39, 0.2))",
-              "linear-gradient(135deg, rgba(17, 24, 39, 0.2), rgba(88, 28, 135, 0.4), rgba(29, 78, 216, 0.2))",
-              "linear-gradient(135deg, rgba(29, 78, 216, 0.2), rgba(17, 24, 39, 0.4), rgba(88, 28, 135, 0.2))",
-            ],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-        />
+      <Swiper
+  effect="coverflow"
+  grabCursor={true}
+  centeredSlides={true}
+  slidesPerView="auto"
+  spaceBetween={100} // tighter gap
+  coverflowEffect={{
+    rotate: 50, // less rotation for clean look
+    stretch: 0,
+    depth: 150,
+    modifier: 1,
+    slideShadows: false,
+  }}
+  pagination={{ clickable: true }}
+  navigation
+  autoplay={{ delay: 2000, disableOnInteraction: false }}
+  modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+  className="mySwiper"
+  breakpoints={{
+    320: { spaceBetween: 10, coverflowEffect: { depth: 80, rotate: 6 } },
+    640: { spaceBetween: 20, coverflowEffect: { depth: 120, rotate: 8 } },
+    1024: { spaceBetween: 50, coverflowEffect: { depth: 150, rotate: 10 } },
+  }}
+>
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="Ecommerce"
+      description="A modern, responsive Ecommerce website showcasing my skills and projects with smooth animations and interactive elements."
+      ProjectImage={Ecommerce}
+      projectLink="https://frontend-ecommerce-lemon.vercel.app"
+      technologies={["React", "Tailwind CSS"]}
+    />
+  </SwiperSlide>
 
-        <div className="relative backdrop-blur-sm bg-gray-900/60 border border-gray-700/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
-          >
-            My Projects
-          </motion.h2>
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="Jewellery-store"
+      description="An elegant full-stack jewellery store web app with product browsing, cart system, and authentication using React, Node.js, MongoDB, and Tailwind CSS."
+      ProjectImage={tanishq}
+      projectLink="https://ecommerceapi-frontend.onrender.com"
+      technologies={["React", "Tailwindcss", "Node.js", "MongoDB"]}
+    />
+  </SwiperSlide>
 
-          <div className="flex flex-wrap gap-6 justify-center">
-            <ProjectCard
-              title="Ecommerce"
-              description="A modern, responsive Ecommerce website showcasing my skills and projects with smooth animations and interactive elements."
-              ProjectImage={Ecommerce}
-              projectLink="https://frontend-ecommerce-lemon.vercel.app"
-              technologies={["React", "Tailwind CSS"]}
-            />
-            <ProjectCard
-              title="Jewellery-store"
-              description="An elegant full-stack jewellery store web app with product browsing, cart system, and authentication using React, Node.js, MongoDB, and Tailwind CSS."
-              ProjectImage={tanishq}
-              projectLink="https://ecommerceapi-frontend.onrender.com"
-            technologies={["React", "Tailwindcss","Node.js","MondoDB"]}
-            />
-            <ProjectCard
-              title="Poke-World"
-              description="A Pokemon-themed web application with API integration and dynamic content rendering."
-              ProjectImage={poke}
-              projectLink="https://pokemon-universe-lovat.vercel.app"
-              technologies={["HTML5", "CSS3", "JAVASCRIPT"]}
-            />
-            <ProjectCard
-              title="TMDB-Movies"
-              description="A responsive TMDB-movies with multiple components and clean UI"
-              ProjectImage={TMDB}
-              projectLink="https://tmbd-movies-woad.vercel.app/"
-              technologies={["React", "Tailwindcss"]}
-            />
-            <ProjectCard
-              title="DashBoard"
-              description="Built a sleek multi-page React Dashboard! 
-              Includes smooth navigation, dynamic UI & real-time data handling."
-              ProjectImage={DashBoard}
-              projectLink="https://dash-board-react-azure.vercel.app"
-              technologies={["React", "TailwindCss"]}
-            />
-            <ProjectCard
-              title="Flip Card Game"
-              description="A memory-based card flipping game with smooth animations and scoring system."
-              ProjectImage={Flip}
-              projectLink="https://flip-game-flax.vercel.app"
-              technologies={["HTML5", "JavaScript", "CSS"]}
-            />
-          </div>
-        </div>
-      </motion.div>
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="Poke-World"
+      description="A Pokemon-themed web application with API integration and dynamic content rendering."
+      ProjectImage={poke}
+      projectLink="https://pokemon-universe-lovat.vercel.app"
+      technologies={["HTML5", "CSS3", "JavaScript"]}
+    />
+  </SwiperSlide>
+
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="TMDB-Movies"
+      description="A responsive TMDB-movies with multiple components and clean UI."
+      ProjectImage={TMDB}
+      projectLink="https://tmbd-movies-woad.vercel.app/"
+      technologies={["React", "Tailwindcss"]}
+    />
+  </SwiperSlide>
+
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="DashBoard"
+      description="Built a sleek multi-page React Dashboard! Includes smooth navigation, dynamic UI & real-time data handling."
+      ProjectImage={DashBoard}
+      projectLink="https://dash-board-react-azure.vercel.app"
+      technologies={["React", "TailwindCss"]}
+    />
+  </SwiperSlide>
+
+  <SwiperSlide style={{ width: "280px" }}>
+    <ProjectCard
+      title="Flip Card Game"
+      description="A memory-based card flipping game with smooth animations and scoring system."
+      ProjectImage={Flip}
+      projectLink="https://flip-game-flax.vercel.app"
+      technologies={["HTML5", "JavaScript", "CSS"]}
+    />
+  </SwiperSlide>
+</Swiper>
+
 
       {/* Experience Section */}
       <motion.div
