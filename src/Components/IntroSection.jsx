@@ -101,7 +101,7 @@ const IntroSection = ({ activeSection }) => {
           </motion.p>
           
           <motion.a
-           href="TanmayShukla Resume.pdf"
+           href="Tanmayshukla_updated_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className='inline-block relative group'
