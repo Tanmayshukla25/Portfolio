@@ -9,7 +9,6 @@ import {
   FaGitAlt,
   FaLinkedin,
   FaGithub,
-  
 } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { SiTailwindcss, SiMongodb, SiFirebase, SiGmail } from "react-icons/si";
@@ -18,7 +17,7 @@ import poke from "./assets/Poke.png";
 import Flip from "./assets/FlipGame.png";
 import DashBoard from "./assets/Dashboard.png";
 import tanishq from "./assets/Jewellery.png";
-import Ecommerce from "./assets/Ecommerce.png";
+import Ecommerce from "./assets/EcommerceApp.png";
 import TMDB from "./assets/TMDB.png";
 import { SiExpress } from "react-icons/si";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,10 +25,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, EffectCoverflow, Navigation, Pagination } from "swiper/modules";
-
-
-
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 
 function MainContent({ activeSection }) {
   return (
@@ -97,25 +98,18 @@ function MainContent({ activeSection }) {
               name="Bootstrap"
               color="text-purple-400"
             />
-              <SkillIcon
-              icon={<FaNodeJs />}
-              name="Node"
-              color="text-green-500"
-            />
-              <SkillIcon
+            <SkillIcon icon={<FaNodeJs />} name="Node" color="text-green-500" />
+            <SkillIcon
               icon={<BiLogoMongodb />}
               name="MongoDB"
-               color="text-green-500"
-             
+              color="text-green-500"
             />
 
-             <SkillIcon
+            <SkillIcon
               icon={<SiExpress />}
               name="Express"
-               color="text-yellow-500"
-             
+              color="text-yellow-500"
             />
-             
           </div>
         </div>
       </motion.div>
@@ -185,14 +179,12 @@ function MainContent({ activeSection }) {
                   className="flex items-center gap-3 hover:text-white transition-colors duration-300"
                   whileHover={{ x: 5 }}
                 >
-                 
                   <span>Playing cricket</span>
                 </motion.li>
                 <motion.li
                   className="flex items-center gap-3 hover:text-white transition-colors duration-300"
                   whileHover={{ x: 5 }}
                 >
-                 
                   <span>Watching movies</span>
                 </motion.li>
               </ul>
@@ -203,90 +195,92 @@ function MainContent({ activeSection }) {
 
       {/* Portfolio Section */}
       <Swiper
-  effect="coverflow"
-  grabCursor={true}
-  centeredSlides={true}
-  slidesPerView="auto"
-  spaceBetween={100} // tighter gap
-  coverflowEffect={{
-    rotate: 50, // less rotation for clean look
-    stretch: 0,
-    depth: 150,
-    modifier: 1,
-    slideShadows: false,
-  }}
-  pagination={{ clickable: true }}
-  navigation
-  autoplay={{ delay: 2000, disableOnInteraction: false }}
-  modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-  className="mySwiper"
-  breakpoints={{
-    320: { spaceBetween: 10, coverflowEffect: { depth: 80, rotate: 6 } },
-    640: { spaceBetween: 20, coverflowEffect: { depth: 120, rotate: 8 } },
-    1024: { spaceBetween: 50, coverflowEffect: { depth: 150, rotate: 10 } },
-  }}
->
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="Ecommerce"
-      description="A modern, responsive Ecommerce website showcasing my skills and projects with smooth animations and interactive elements."
-      ProjectImage={Ecommerce}
-      projectLink="https://frontend-ecommerce-lemon.vercel.app"
-      technologies={["React", "Tailwind CSS"]}
-    />
-  </SwiperSlide>
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView="auto"
+        spaceBetween={100} // tighter gap
+        coverflowEffect={{
+          rotate: 50, // less rotation for clean look
+          stretch: 0,
+          depth: 150,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        pagination={{ clickable: true }}
+        navigation
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+        className="mySwiper"
+        breakpoints={{
+          320: { spaceBetween: 10, coverflowEffect: { depth: 80, rotate: 6 } },
+          640: { spaceBetween: 20, coverflowEffect: { depth: 120, rotate: 8 } },
+          1024: {
+            spaceBetween: 50,
+            coverflowEffect: { depth: 150, rotate: 10 },
+          },
+        }}
+      >
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="Luxe Jewels"
+            description="A full-stack e-commerce website built using React, Tailwind CSS, Node.js, and MongoDB — featuring product listings, cart and wishlist management, secure authentication, and a modern responsive UI with smooth animations."
+            ProjectImage={Ecommerce}
+            projectLink="https://frontend-ecommerce-lemon.vercel.app"
+            technologies={["React", "Tailwind CSS", "Node.js", "MongoDB"]}
+          />
+        </SwiperSlide>
 
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="Jewellery-store"
-      description="An elegant full-stack jewellery store web app with product browsing, cart system, and authentication using React, Node.js, MongoDB, and Tailwind CSS."
-      ProjectImage={tanishq}
-      projectLink="https://ecommerceapi-frontend.onrender.com"
-      technologies={["React", "Tailwindcss", "Node.js", "MongoDB"]}
-    />
-  </SwiperSlide>
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="Jewellery-store"
+            description="An elegant full-stack jewellery store web app with product browsing, cart system, and authentication using React, Node.js, MongoDB, and Tailwind CSS."
+            ProjectImage={tanishq}
+            projectLink="https://ecommerceapi-frontend.onrender.com"
+            technologies={["React", "Tailwindcss", "Node.js", "MongoDB"]}
+          />
+        </SwiperSlide>
 
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="Poke-World"
-      description="A Pokemon-themed web application with API integration and dynamic content rendering."
-      ProjectImage={poke}
-      projectLink="https://pokemon-universe-lovat.vercel.app"
-      technologies={["HTML5", "CSS3", "JavaScript"]}
-    />
-  </SwiperSlide>
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="Poke-World"
+            description="A Pokemon-themed web application with API integration and dynamic content rendering."
+            ProjectImage={poke}
+            projectLink="https://pokemon-universe-lovat.vercel.app"
+            technologies={["HTML5", "CSS3", "JavaScript"]}
+          />
+        </SwiperSlide>
 
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="TMDB-Movies"
-      description="A responsive TMDB-movies with multiple components and clean UI."
-      ProjectImage={TMDB}
-      projectLink="https://tmbd-movies-woad.vercel.app/"
-      technologies={["React", "Tailwindcss"]}
-    />
-  </SwiperSlide>
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="TMDB-Movies"
+            description="A responsive TMDB-movies with multiple components and clean UI."
+            ProjectImage={TMDB}
+            projectLink="https://tmbd-movies-woad.vercel.app/"
+            technologies={["React", "Tailwindcss"]}
+          />
+        </SwiperSlide>
 
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="DashBoard"
-      description="Built a sleek multi-page React Dashboard! Includes smooth navigation, dynamic UI & real-time data handling."
-      ProjectImage={DashBoard}
-      projectLink="https://dash-board-react-azure.vercel.app"
-      technologies={["React", "TailwindCss"]}
-    />
-  </SwiperSlide>
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="DashBoard"
+            description="Built a sleek multi-page React Dashboard! Includes smooth navigation, dynamic UI & real-time data handling."
+            ProjectImage={DashBoard}
+            projectLink="https://dash-board-react-azure.vercel.app"
+            technologies={["React", "TailwindCss"]}
+          />
+        </SwiperSlide>
 
-  <SwiperSlide style={{ width: "280px" }}>
-    <ProjectCard
-      title="Flip Card Game"
-      description="A memory-based card flipping game with smooth animations and scoring system."
-      ProjectImage={Flip}
-      projectLink="https://flip-game-flax.vercel.app"
-      technologies={["HTML5", "JavaScript", "CSS"]}
-    />
-  </SwiperSlide>
-</Swiper>
-
+        <SwiperSlide style={{ width: "280px" }}>
+          <ProjectCard
+            title="Flip Card Game"
+            description="A memory-based card flipping game with smooth animations and scoring system."
+            ProjectImage={Flip}
+            projectLink="https://flip-game-flax.vercel.app"
+            technologies={["HTML5", "JavaScript", "CSS"]}
+          />
+        </SwiperSlide>
+      </Swiper>
 
       {/* Experience Section */}
       <motion.div
@@ -437,7 +431,7 @@ function MainContent({ activeSection }) {
             >
               <motion.a
                 href="https://www.linkedin.com/in/tanmay-shukla-620724329/"
-                  target="_blank"
+                target="_blank"
                 className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-full hover:bg-blue-600/20 transition border border-gray-600/30 group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -446,7 +440,7 @@ function MainContent({ activeSection }) {
               </motion.a>
               <motion.a
                 href="https://github.com/Tanmayshukla25"
-                  target="_blank"
+                target="_blank"
                 className="bg-gray-800/50 backdrop-blur-sm p-4 rounded-full hover:bg-gray-600/20 transition border border-gray-600/30 group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
