@@ -15,7 +15,7 @@ export default function ContactForm() {
       `Hello Tanmayshukla 👋,%0A%0AI am ${name}.%0AEmail: ${email}%0AMessage: ${message}`
     );
 
-    const phoneNumber = "8000540298";
+    const phoneNumber = "918000540298";
 
     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, "_blank");
 
